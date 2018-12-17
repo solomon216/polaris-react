@@ -21,7 +21,11 @@ Use [the changelog guidelines](https://git.io/polaris-changelog-guidelines) to f
 
 ### Documentation
 
+<<<<<<< HEAD
 - Added deprecation guidelines ([#853](https://github.com/Shopify/polaris-react/pull/853))
+=======
+- Add `Stack.Item` properties and description to [style guide](https://polaris.shopify.com)’s ([#772](https://github.com/Shopify/polaris-react/pull/772))
+>>>>>>> added Stack.Item properties to documentation
 
 ### Development workflow
 
