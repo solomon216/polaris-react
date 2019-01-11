@@ -228,7 +228,7 @@ class TextField extends React.PureComponent<CombinedProps, State> {
 
     const characterCountMarkup = showCharacterCount ? (
       <div
-        id={`${id}-character-counter`}
+        id={`${id}CharacterCounter}`}
         className={characterCountClassName}
         aria-label={characterCountLabel}
         aria-live="polite"
@@ -266,7 +266,7 @@ class TextField extends React.PureComponent<CombinedProps, State> {
       describedBy.push(helpTextID(id));
     }
     if (showCharacterCount) {
-      describedBy.push(`${id}-character-counter`);
+      describedBy.push(`${id}CharacterCounter`);
     }
 
     const labelledBy = [labelID(id)];
