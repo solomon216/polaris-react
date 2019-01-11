@@ -49,7 +49,7 @@ export default function UserMenu({
         />
       </MessageIndicator>
       <span className={styles.Details}>
-        <p className={styles.Name} title="altText">
+        <p className={styles.Name}>
           {name}
         </p>
         <p className={styles.Detail}>{detail}</p>
