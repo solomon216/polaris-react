@@ -69,22 +69,6 @@ copy(['./src/**/*.{scss,svg,png,jpg,jpeg,json}', intermediateBuild], {up: 1})
       esnextIndex.replace(/import '.\/styles\/global\.scss';/g, ''),
     );
   })
-  .then(() => {
-    writeFileSync(
-      resolvePath(intermediateBuild, '.babelrc'),
-      `
-      {
-        "presets": [
-          ["babel-preset-shopify/web", {"modules": false}],
-          ["babel-preset-shopify/react"]
-        ],
-        "plugins": [
-          "../config/babel/plugins/sass-namespace-to-default-import.js"
-        ]
-      }
-    `,
-    );
-  })
   // Main bundle: supports all our supported browsers, CommonJS, and
   // uses the full class names for any Sass imports
   .then(() =>
