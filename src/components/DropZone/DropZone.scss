@@ -15,6 +15,10 @@ $dropzone-overlay-border-color-error: color('red');
 $dropzone-overlay-background: color('indigo', 'lighter');
 $dropzone-overlay-background-error: color('red', 'lighter');
 
+.DropZoneWrapper {
+  height: inherit;
+}
+
 .DropZone {
   position: relative;
   display: flex;

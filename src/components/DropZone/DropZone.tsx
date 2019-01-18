@@ -266,19 +266,20 @@ export class DropZone extends React.Component<CombinedProps, State> {
       ) : null;
 
     const dropZoneMarkup = (
-      <div
-        ref={this.setNode}
-        className={classes}
-        aria-disabled={disabled}
-        onClick={this.handleClick}
-        onDragStart={handleDragStart}
-      >
-        {dragOverlay}
-        {dragErrorOverlay}
-        <div className={styles.Container}>{children}</div>
-        <VisuallyHidden>
-          <input {...inputAttributes} />
-        </VisuallyHidden>
+      <div ref={this.setNode} className={styles.DropZoneWrapper}>
+        <div
+          className={classes}
+          aria-disabled={disabled}
+          onClick={this.handleClick}
+          onDragStart={handleDragStart}
+        >
+          {dragOverlay}
+          {dragErrorOverlay}
+          <div className={styles.Container}>{children}</div>
+          <VisuallyHidden>
+            <input {...inputAttributes} />
+          </VisuallyHidden>
+        </div>
       </div>
     );
 
@@ -364,13 +365,13 @@ export class DropZone extends React.Component<CombinedProps, State> {
     }
 
     let size = 'extraLarge';
-    const width = this.node.getBoundingClientRect().width;
+    const wrapperHeight = this.node.getBoundingClientRect().height;
 
-    if (width < 100) {
+    if (wrapperHeight < 100) {
       size = 'small';
-    } else if (width < 160) {
+    } else if (wrapperHeight < 160) {
       size = 'medium';
-    } else if (width < 300) {
+    } else if (wrapperHeight < 300) {
       size = 'large';
     }
 
